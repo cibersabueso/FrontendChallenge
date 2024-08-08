@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductList from '../components/ProductList.vue';
+import Sidebar from '../components/Sidebar.vue';
+---
+
+<Layout title="Product Catalog" showBanner={true}>
+	<div class="flex">
+		<Sidebar client:load />
+		<div class="flex-1 ml-64">
+			<h1 class="text-3xl font-bold mb-4">Product Catalog</h1>
+			<ProductList client:load />
+		</div>
+	</div>
+</Layout>
